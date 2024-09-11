@@ -1,8 +1,10 @@
-# Desafio Criptografia Backend
-Seu desafio será implementar a criptografia em um serviço de forma transparente para a API e para as camadas de serviço de sua aplicação. O objetivo é garantir que os campos sensíveis dos objetos de entidade não sejam visíveis diretamente, realizando a criptografia em tempo de execução durante a conversão da entidade para a coluna correspondente no banco de dados, e vice-versa.
+# Backend Cryptography Challenge
 
-# Exemplo
-Considere os campos userDocument e creditCardToken como campos sensíveis que devem ser criptografados. A tabela de exemplo seria a seguinte:
+Your challenge is to implement encryption in a service transparently for the API and the service layers of your application. The goal is to ensure that sensitive fields of entity objects are not directly visible, performing encryption at runtime during the conversion of the entity to the corresponding database column and vice versa.
+
+# Example
+
+Consider the fields userDocument and creditCardToken as sensitive fields that should be encrypted. The example table would be as follows:
 
 | id | userDocument          | creditCardToken | value |
 |----|------------------------|-----------------|-------|
@@ -10,18 +12,17 @@ Considere os campos userDocument e creditCardToken como campos sensíveis que de
 | 2  | MzI5NDU0MTA1ODM=       | eHl6NDU2        | 1000  |
 | 3  | NzYwNzc0NTIzODY=       | Nzg5eHB0bw==    | 1500  |
 
+The corresponding entity structure would be:
 
-A estrutura da entidade correspondente seria a seguinte:
+| Field           | Type   |
+|-----------------|--------|
+| id              | Long   |
+| userDocument    | String |
+| creditCardToken | String |
+| value           | Long   |
 
-| Campo            | Tipo   |
-|------------------|--------|
-| id               | Long   |
-| userDocument     | String |
-| creditCardToken  | String |
-| value            | Long   |
+# Requirements
 
+- Implement a simple CRUD considering the mentioned fields as sensitive.
 
-# Requisitos
-- Implemente um CRUD simples considerando os campos mencionados acima como sensíveis.
-
-- Utilize o algoritmo de criptografia de sua preferência. Sugestões: SHA-512 ou PBKDF2.
+- Use the encryption algorithm of your choice. Suggestions: SHA-512 or PBKDF2.
