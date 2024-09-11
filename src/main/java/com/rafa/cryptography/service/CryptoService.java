@@ -3,7 +3,7 @@ package com.rafa.cryptography.service;
 import org.jasypt.util.text.StrongTextEncryptor;
 
 /**
- * We use the JASYPT(Java Simplified Encryption) library for encryption operations
+ * Using the JASYPT(Java Simplified Encryption) library for encryption operations
  */
 public class CryptoService {
     private static final StrongTextEncryptor encryptor;
